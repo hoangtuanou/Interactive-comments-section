@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.App {
+  padding: 30px 20px;
+  min-height: 100vh;
+}
+
+button:disabled {
+  background-color: var(--light-gray);
+  cursor: not-allowed;
+}
+
+textarea:focus {
+  outline: 1px solid var(--moderate-blue);
+}
+
+@media (min-width: 768px) {
+  .only-mobile {
+    display: none;
+  }
+}

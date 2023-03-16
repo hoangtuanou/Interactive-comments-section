@@ -1,0 +1,25 @@
+.score-action {
+  display: flex;
+  border-radius: 10px;
+  color: var(--moderate-blue);
+  font-weight: 700;
+  align-items: center;
+  background-color: var(--very-light-gray);
+  width: min-content;
+  overflow: hidden;
+  padding: 5px 10px;
+  gap: 5px;
+
+  button {
+    background-color: var(--very-light-gray);
+    color: var(--moderate-blue);
+    opacity: 0.5;
+  }
+}
+
+@media (min-width: 768px) {
+  .score-action {
+    flex-direction: column;
+    min-width: 40px;
+  }
+}

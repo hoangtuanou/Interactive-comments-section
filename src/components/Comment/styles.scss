@@ -1,0 +1,158 @@
+.list-replies {
+  padding: 0 0 0 20px;
+  margin-top: 15px;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--light-gray);
+  }
+}
+
+.comment-wrapper {
+  &:not(:first-child) {
+    margin-top: 15px;
+  }
+
+  .comment-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+
+    & > img {
+      width: 40px;
+    }
+
+    .username {
+      font-weight: 500;
+      color: var(--dark-blue);
+    }
+
+    .curr-bag {
+      background-color: var(--moderate-blue);
+      color: var(--white);
+      padding: 0 10px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .btn {
+      display: none;
+    }
+  }
+}
+
+.comment-row {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  color: var(--grayish-blue);
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+  .tag-name {
+    font-weight: 600;
+    color: var(--moderate-blue);
+    margin-right: 5px;
+  }
+
+  & > .score-action {
+    display: none;
+  }
+}
+
+.comment-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.comment-actions {
+  display: flex;
+  margin-left: auto;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  color: var(--moderate-blue);
+  background-color: transparent;
+  margin-left: auto;
+}
+
+.btn-delete {
+  color: var(--soft-red);
+}
+
+.modal-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  .modal-inner {
+    width: calc(100vw - 20px);
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 350px;
+
+    h2 {
+      color: var(--dark-blue);
+    }
+
+    p {
+      margin: 10px 0;
+      color: var(--grayish-blue);
+    }
+
+    .btn-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 10px;
+      background-color: var(--grayish-blue);
+      border-radius: 8px;
+      color: var(--white);
+      text-transform: uppercase;
+      flex: 1;
+    }
+
+    .btn-confirm {
+      background-color: var(--soft-red);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .comment-row > .score-action {
+    display: flex;
+  }
+
+  .comment-wrapper .comment-header .btn {
+    display: flex;
+  }
+}

@@ -1,0 +1,51 @@
+.reply-wrapper {
+  display: flex;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+
+  textarea {
+    resize: none;
+    flex: 1 1 100%;
+    border: 1px solid var(--very-light-gray);
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  img,
+  button {
+    order: 1;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  button {
+    background-color: var(--moderate-blue);
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 768px) {
+  .reply-wrapper {
+    textarea {
+      flex: 1;
+    }
+
+    img,
+    button {
+      order: unset;
+    }
+  }
+}
